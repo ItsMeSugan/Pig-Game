@@ -72,6 +72,10 @@ main {
   font-weight: 700;
 }
 
+.player--active .score {
+  font-weight: 400;
+}
+
 .player--active .current {
   opacity: 1;
 }
@@ -114,7 +118,7 @@ main {
   transition: all 0.2s;
   background-color: white;
   background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter:  blur(10px);
+  backdrop-filter: blur(10px);
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
@@ -126,41 +130,41 @@ main {
   margin-right: 0.7rem;
 }
 
-.btn--new{
+.btn--new {
   top: 4rem;
 }
 
-.btn--roll{
+.btn--roll {
   top: 39.3rem;
 }
 
-.btn--hold{
+.btn--hold {
   top: 46.1rem;
 }
 
-.btn:active{
-  transform:  translate(-50%,3px);
-box-shadow:0 1rem 2rem rgba(0, 0, 0, 0.15) ;
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
-.btn:focus{
-  outline:none;
+.btn:focus {
+  outline: none;
 }
 
-.dice{
+.dice {
   position: absolute;
-  left:50%;
-  top:16.5rem;
+  left: 50%;
+  top: 16.5rem;
   transform: translate(-50%);
   height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
-.player--winner{
+.player--winner {
   background-color: #2f2f2f;
 }
 
-.player--winner .name{
+.player--winner .name {
   font-weight: 700;
   color: #c7365f;
 }
