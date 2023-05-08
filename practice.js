@@ -30,8 +30,8 @@ const init = function () {
   current1El.textContent = 0;
 
   diceEl.classList.remove('hidden');
-  // victoryP1.classList.add('hidden');
-  // victoryP2.classList.add('hidden');
+  victoryP1.classList.add('hidden');
+  victoryP2.classList.add('hidden');
   player0El.classList.remove('player--winner');
   player1El.classList.remove('player--winner');
   player0El.classList.add('player--active');
@@ -66,7 +66,7 @@ btnRoll.addEventListener('click', function () {
       document.getElementById(`current--${activePlayer}`).textContent =
         currentScore;
     } else {
-     // switch to next Player//
+      // switch to next Player//
       switchPlayer();
     }
   }
@@ -77,8 +77,7 @@ btnHold.addEventListener('click', function () {
     // 1.Add current score to active players score
     scores[activePlayer] += currentScore;
 
-    document.getElementById(`score--${activePlayer}`)
-    .textContent =
+    document.getElementById(`score--${activePlayer}`).textContent =
       scores[activePlayer];
 
     //2.check if players score is above condition
@@ -86,11 +85,9 @@ btnHold.addEventListener('click', function () {
       //finish the game
       playing = false;
       diceEl.classList.add('hidden');
-      if(activePlayer === 0)
-      victoryP1.classList.remove('hidden');
+      if (activePlayer === 0) victoryP1.classList.remove('hidden');
       // victoryP1.textContent = 'Victory';
-      else
-      victoryP2.classList.remove('hidden');
+      else victoryP2.classList.remove('hidden');
       // victoryP2.textContent = 'Victory';
       document
         .querySelector(`.player--${activePlayer}`)
